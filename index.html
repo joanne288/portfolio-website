@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo1.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p> Full-stack developer</p>
+                <h1>Hi, I'm <span>Joanne</span><br> Mascarenhas from <br>India</h1>
+            </div>
+    </div>
+    </div>
+<!-----------------about------------------->
+    <div id="about">
+        <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+<img src="images/user.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                     Reiciendis velit illum culpa numquam ex nam,
+                     beatae delectus vero molestiae, tempore earum eligendi itaque,
+                      odit nihil voluptate. Accusamus in 
+                     architecto consequuntur.</p>
+                     
+                     
+                     <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                     </div>
+                     <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Full-stack</span><br> Designing Web/app interfaces</li>
+                            <li><span>Web development</span><br>Web app development</li>
+                            <li><span>App development</span><br>Designing Web/App interfaces</li>
+                        </ul>
+                     </div>
+
+
+                     <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023-current</span><br> Full-stack developer training at sunstone</li>
+                            <li><span>2023-2024</span><br>Java and Web developer</li>
+                            <li><span>2023-2024</span><br> Internship at Sunstone</li>
+                        </ul>
+                     </div>
+                     <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023</span><br> BCA at Sunstone</li>
+                            <li><span>2023</span><br>Java and data structures</li>
+                            <li><span>2024</span><br>Designing Web/App interfaces</li>
+                        </ul>
+                     </div>
+
+
+            </div>
+        </div>
+        </div>
+    </div>
+<!---------------portfolio--------------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title"> My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work1.jpg">
+            </div>
+            <div class="work">
+                <img src="images/work2.jpg">
+            </div>
+            <div class="work">
+                <img src="images/work3.jpg">
+            </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-------------------------------contact--------------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact Me</h1>
+                <p>contact@example.com</p>
+                <p><i class="fas fa-phone-square-alt"></i>0123456789</p>
+                </div>
+            </div>
+            <div class="contact-right"> 
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your message"></textarea>
+                    <button type="submit"> Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+</body>
+</html>
